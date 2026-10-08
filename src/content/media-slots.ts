@@ -1,0 +1,146 @@
+export interface MediaSlot {
+  id: string;
+  name: string;
+  path: string;
+  fallbackPoster?: string;
+  alt: string;
+  aspectRatio: string;
+  recommendedResolution: string;
+  intendedSubject: string;
+  type: "image" | "video";
+}
+
+export const mediaSlots: Record<string, MediaSlot> = {
+  heroVideo: {
+    id: "hero_video_loop",
+    name: "Hero Video Background",
+    path: "/images/slots/hero-thali-loop.mp4",
+    fallbackPoster: "/images/slots/hero-thali-poster.jpg",
+    alt: "Steaming hot pure vegetarian thali with paneer, dal, and soft phulkas being unpacked in an office",
+    aspectRatio: "16:9",
+    recommendedResolution: "1920x1080 (H.264 mp4, muted, looping, under 4MB)",
+    intendedSubject: "Steaming hot Indian lunch box, fresh rotis, aromatic dal, and happy young professional",
+    type: "video",
+  },
+  thaliMonday: {
+    id: "thali_monday",
+    name: "Monday Shahi Thali",
+    path: "/images/slots/thali-monday.jpg",
+    alt: "Monday Shahi Paneer Special Thali with Yellow Dal Tadka, 3 Phulkas, Jeera Rice, Salad & Gulab Jamun",
+    aspectRatio: "4:3",
+    recommendedResolution: "1200x900",
+    intendedSubject: "Top-down / 45-degree angle of fresh steel/biodegradable Lunch Bag thali with golden shahi paneer",
+    type: "image",
+  },
+  thaliTuesday: {
+    id: "thali_tuesday",
+    name: "Tuesday Homestyle Rajma Thali",
+    path: "/images/slots/thali-tuesday.jpg",
+    alt: "Tuesday Amritsari Rajma Masala Thali with Aloo Gobhi Adraki, Ghee Phulkas, Steamed Rice, Raita & Kheer",
+    aspectRatio: "4:3",
+    recommendedResolution: "1200x900",
+    intendedSubject: "Rich comforting slow-cooked rajma with fluffy steamed basmati rice and warm rotis",
+    type: "image",
+  },
+  thaliWednesday: {
+    id: "thali_wednesday",
+    name: "Wednesday Dal Makhani Deluxe",
+    path: "/images/slots/thali-wednesday.jpg",
+    alt: "Wednesday Dal Makhani Special Thali with Kadhai Paneer, Hot Phulkas, Peas Pulao, Kachumber & Halwa",
+    aspectRatio: "4:3",
+    recommendedResolution: "1200x900",
+    intendedSubject: "Slow-cooked black lentils simmered with white butter, paired with fresh paneer and green peas pulao",
+    type: "image",
+  },
+  thaliThursday: {
+    id: "thali_thursday",
+    name: "Thursday Methi Malai Paneer Thali",
+    path: "/images/slots/thali-thursday.jpg",
+    alt: "Thursday Methi Malai Paneer Thali with Panchmel Dal, 3 Butter Phulkas, Jeera Rice & Sweet Boondi",
+    aspectRatio: "4:3",
+    recommendedResolution: "1200x900",
+    intendedSubject: "Creamy fragrant methi paneer with aromatic panchmel dal and soft puffed phulkas",
+    type: "image",
+  },
+  thaliFriday: {
+    id: "thali_friday",
+    name: "Friday Weekend Feast Thali",
+    path: "/images/slots/thali-friday.jpg",
+    alt: "Friday Paneer Tikka Masala Thali with Pindi Chhole, Veg Biryani Rice, Soft Rotis, Boondi Raita & Rasgulla",
+    aspectRatio: "4:3",
+    recommendedResolution: "1200x900",
+    intendedSubject: "Celebratory Friday corporate meal with smokey paneer tikka masala and spiced pindi chhole",
+    type: "image",
+  },
+  founderStory: {
+    id: "story_founder",
+    name: "Founder Photo Slot",
+    path: "/images/slots/story-founder.jpg",
+    alt: "Founder of Lunch Bag in the central test kitchen ensuring home-style spice balance",
+    aspectRatio: "1:1",
+    recommendedResolution: "1000x1000",
+    intendedSubject: "Founder smiling warmly in a bright kitchen apron tasting traditional dal recipe",
+    type: "image",
+  },
+  kitchenHygiene: {
+    id: "story_kitchen",
+    name: "Pure Veg Kitchen Hygiene Slot",
+    path: "/images/slots/story-kitchen.jpg",
+    alt: "Sparkling stainless steel 100% vegetarian central kitchen with steam kettles and strict hygiene protocol",
+    aspectRatio: "16:9",
+    recommendedResolution: "1600x900",
+    intendedSubject: "Hygienic kitchen with chefs wearing hairnets, gloves, cooking fresh phulkas on iron tawa",
+    type: "image",
+  },
+  corporateHero: {
+    id: "corporate_hero",
+    name: "Corporate Lunch Perk Slot",
+    path: "/images/slots/corporate-lunch.jpg",
+    alt: "Corporate team enjoying wholesome Lunch Bag thalis together at their office cafeteria table",
+    aspectRatio: "16:9",
+    recommendedResolution: "1600x900",
+    intendedSubject: "Diverse tech / office professionals smiling and unpacking Lunch Bags at their conference table",
+    type: "image",
+  },
+  officialBags: {
+    id: "official_lunch_bags",
+    name: "Official Lunch Bag Signature Packaging",
+    path: "/images/slots/official-lunch-bags.jpg",
+    alt: "Official branded Lunch Bag packaging featuring 5 stacked hot homestyle meal containers in insulated tote and craft carrier bags",
+    aspectRatio: "3:2",
+    recommendedResolution: "1024x682",
+    intendedSubject: "Signature reusable fabric tote and kraft carry bag stacked with 5 fresh homestyle lunch containers",
+    type: "image",
+  },
+  officialBagTote: {
+    id: "official_bag_tote",
+    name: "Official Reusable Fabric Tote Bag",
+    path: "/images/slots/official-bag-tote.jpg",
+    alt: "Official Reusable Fabric Insulated Lunch Bag with side container tier slots",
+    aspectRatio: "3:4",
+    recommendedResolution: "480x682",
+    intendedSubject: "Reusable fabric tote bag holding 5 stacked meal containers",
+    type: "image",
+  },
+  officialBagKraft: {
+    id: "official_bag_kraft",
+    name: "Official Eco Kraft Paper Carrier Bag",
+    path: "/images/slots/official-bag-kraft.jpg",
+    alt: "Official Eco-friendly Kraft Paper Lunch Bag with handle and pure veg badges",
+    aspectRatio: "3:4",
+    recommendedResolution: "480x682",
+    intendedSubject: "Biodegradable kraft paper bag holding 5 stacked meal containers",
+    type: "image",
+  },
+  logo: {
+    id: "official_logo",
+    name: "Lunch Bag Official Brand Logo",
+    path: "/images/logo.png",
+    alt: "Lunch Bag - Homemade Food Official Logo",
+    aspectRatio: "1:1",
+    recommendedResolution: "900x1024",
+    intendedSubject: "Official Lunch Bag speed-bag brand logo with cutlery and wheat sprig",
+    type: "image",
+  },
+};
+
