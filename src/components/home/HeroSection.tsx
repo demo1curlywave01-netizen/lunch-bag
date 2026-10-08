@@ -4,7 +4,6 @@ import React, { useRef, useState } from "react";
 import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
 import { MagneticButton } from "@/components/ui/MagneticButton";
-import { SpeedTicker } from "@/components/home/SpeedTicker";
 import { VegMark } from "@/components/ui/VegMark";
 import { mediaSlots } from "@/content/media-slots";
 import { siteConfig } from "@/content/site-config";
@@ -73,9 +72,12 @@ export function HeroSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           {/* Left Column: Headlines & CTAs */}
           <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
-            {/* Speed Ticker & Veg Badge Strip */}
+            {/* Delivery Promise & Veg Badge Strip */}
             <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3">
-              <SpeedTicker />
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-red-50 border border-red-200/70 text-brand-red text-xs font-bold shadow-xs">
+                <span className="w-2 h-2 rounded-full bg-brand-red" />
+                <span>Guaranteed Under 10 Mins to Desk</span>
+              </div>
               <VegMark size="md" showLabel />
             </div>
 
