@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { mediaSlots } from "@/content/media-slots";
+import { siteConfig } from "@/content/site-config";
 import { VegMark } from "@/components/ui/VegMark";
 import { MagneticButton } from "@/components/ui/MagneticButton";
 import {
@@ -24,7 +25,7 @@ export function OfficialBagShowcase() {
     {
       icon: <Layers className="w-5 h-5 text-amber-700" />,
       title: "5 Vertical Tier Compartments",
-      desc: "Rotis, Dal Tadka, Paneer Sabzi, Steamed Rice & Sweet — packed in individual sealed containers stacked vertically so flavours never blend.",
+      desc: "Phulkas, Dal, Sambar, Sabji, Steamed Rice & Sweet — packed in individual sealed containers stacked vertically so flavours never blend.",
     },
     {
       icon: <ShieldCheck className="w-5 h-5 text-emerald-700" />,
@@ -32,33 +33,33 @@ export function OfficialBagShowcase() {
       desc: "Lateral security slots keep every container flat and locked upright. No spilled curries or oily bag bottoms on your keyboard or desk.",
     },
     {
-      icon: <Flame className="w-5 h-5 text-brand-red" />,
+      icon: <Flame className="w-5 h-5 text-[#C85A27]" />,
       title: "65°C Heat Retention",
-      desc: "Insulated construction traps kitchen heat while side ventilation slits prevent moisture buildup, keeping phulkas soft and dal hot.",
+      desc: "Insulated construction traps kitchen heat while side ventilation slits prevent moisture buildup, keeping rotis soft and dal piping hot.",
     },
     {
-      icon: <Leaf className="w-5 h-5 text-green-700" />,
+      icon: <Leaf className="w-5 h-5 text-emerald-700" />,
       title: "Dual Eco Packaging Options",
       desc: "Choose between our reusable heavy-duty fabric tote or our 100% biodegradable unbleached kraft paper carrier bag.",
     },
   ];
 
   return (
-    <section className="py-24 bg-gradient-to-b from-white via-[#FAF7F2] to-white relative overflow-hidden">
+    <section className="py-24 bg-gradient-to-b from-white via-[#FAF6EE]/50 to-white relative overflow-hidden">
       {/* Decorative ambient elements */}
       <div className="absolute top-1/4 -left-48 w-96 h-96 rounded-full bg-amber-100/40 blur-3xl pointer-events-none" />
-      <div className="absolute bottom-1/4 -right-48 w-96 h-96 rounded-full bg-red-100/30 blur-3xl pointer-events-none" />
+      <div className="absolute bottom-1/4 -right-48 w-96 h-96 rounded-full bg-[#C85A27]/10 blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-900/10 text-amber-950 text-xs font-bold uppercase tracking-wider border border-amber-900/15">
-            <PackageCheck className="w-4 h-4 text-brand-red" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#C85A27]/10 text-[#2D140D] text-xs font-bold uppercase tracking-wider border border-[#C85A27]/20">
+            <PackageCheck className="w-4 h-4 text-[#C85A27]" />
             Signature Hardware &amp; Packaging
           </div>
 
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-black text-neutral-900 tracking-tight leading-[1.15]">
-            Meet the Official <span className="text-brand-red">Lunch Bag.</span>
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-black text-[#2D140D] tracking-tight leading-[1.15]">
+            Meet the Official <span className="text-[#C85A27]">Lunch Bag.</span>
             <br />
             <span className="text-neutral-700 text-2xl sm:text-3xl lg:text-4xl font-extrabold">
               Engineered for Spill-Free Desk Delivery.
@@ -68,7 +69,7 @@ export function OfficialBagShowcase() {
           <p className="text-sm sm:text-base text-neutral-600 leading-relaxed max-w-2xl mx-auto">
             Standard food delivery bags tilt, crush food, and leave you with oily containers.
             We custom-engineered our signature vertical 5-tier bags so your homestyle lunch arrives
-            as pristine as it left our test kitchen.
+            as pristine as it left our kitchen.
           </p>
         </div>
 
@@ -76,7 +77,7 @@ export function OfficialBagShowcase() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           {/* Left Column: Official Bag Photography with interactive hotspots */}
           <div className="lg:col-span-7 relative">
-            <div className="relative rounded-3xl overflow-hidden bg-white p-3 sm:p-4 shadow-2xl border border-amber-900/15 group">
+            <div className="relative rounded-3xl overflow-hidden bg-white p-3 sm:p-4 shadow-2xl border border-[#C85A27]/15 group">
               <div className="relative aspect-[3/2] rounded-2xl overflow-hidden bg-neutral-100">
                 <Image
                   src={mediaSlots.officialBags.path}
@@ -99,8 +100,8 @@ export function OfficialBagShowcase() {
                 </div>
 
                 <div className="absolute top-3 right-3 sm:top-4 sm:right-4">
-                  <div className="bg-amber-950/80 backdrop-blur-md px-3 py-1 rounded-full text-[11px] font-bold text-white shadow-md border border-amber-800/40 flex items-center gap-1">
-                    <Sparkles className="w-3 h-3 text-amber-300" />
+                  <div className="bg-[#2D140D]/80 backdrop-blur-md px-3 py-1 rounded-full text-[11px] font-bold text-white shadow-md border border-amber-800/40 flex items-center gap-1">
+                    <Sparkles className="w-3 h-3 text-[#D48D48]" />
                     <span>5 Tiers Visible</span>
                   </div>
                 </div>
@@ -147,10 +148,10 @@ export function OfficialBagShowcase() {
           {/* Right Column: Key Innovations & Features */}
           <div className="lg:col-span-5 space-y-6">
             <div className="space-y-2">
-              <span className="text-xs font-bold text-brand-red uppercase tracking-wider">
+              <span className="text-xs font-bold text-[#C85A27] uppercase tracking-wider">
                 Built For Modern Offices
               </span>
-              <h3 className="font-display text-2xl sm:text-3xl font-extrabold text-neutral-900 leading-tight">
+              <h3 className="font-display text-2xl sm:text-3xl font-extrabold text-[#2D140D] leading-tight">
                 Why Lunch Bag Packaging Beats Everything Else
               </h3>
             </div>
@@ -160,13 +161,13 @@ export function OfficialBagShowcase() {
               {bagFeatures.map((feat) => (
                 <div
                   key={feat.title}
-                  className="p-4 rounded-2xl bg-white border border-amber-900/10 shadow-xs hover:border-amber-900/25 transition-colors flex items-start gap-3.5"
+                  className="p-4 rounded-2xl bg-white border border-[#C85A27]/15 shadow-xs hover:border-[#C85A27]/30 transition-colors flex items-start gap-3.5"
                 >
-                  <div className="p-2 rounded-xl bg-[#FAF7F2] border border-amber-900/10 shrink-0 mt-0.5">
+                  <div className="p-2 rounded-xl bg-[#FAF6EE] border border-[#C85A27]/15 shrink-0 mt-0.5">
                     {feat.icon}
                   </div>
                   <div className="space-y-1">
-                    <h4 className="font-bold text-sm text-neutral-900 leading-tight">
+                    <h4 className="font-bold text-sm text-[#2D140D] leading-tight">
                       {feat.title}
                     </h4>
                     <p className="text-xs text-neutral-600 leading-relaxed">
@@ -180,11 +181,11 @@ export function OfficialBagShowcase() {
             {/* CTA action bar */}
             <div className="pt-2 flex flex-wrap items-center gap-3">
               <MagneticButton href="/menu" variant="primary" size="md" withArrow>
-                Try Today&apos;s Lunch Bag (₹149)
+                Try Today&apos;s Combo Meal (₹{siteConfig.specialPrice})
               </MagneticButton>
               <Link
                 href="/passes"
-                className="text-xs font-bold text-neutral-700 hover:text-brand-red inline-flex items-center gap-1 px-3 py-2 transition-colors"
+                className="text-xs font-bold text-neutral-700 hover:text-[#C85A27] inline-flex items-center gap-1 px-3 py-2 transition-colors"
               >
                 <span>Automate with a Lunch Pass</span>
                 <ArrowRight className="w-3.5 h-3.5" />

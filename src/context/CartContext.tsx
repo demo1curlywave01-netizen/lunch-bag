@@ -36,8 +36,8 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
   const [items, setItems] = useState<CartItem[]>([]);
   const [isHydrated, setIsHydrated] = useState(false);
   const [isCartOpen, setIsCartOpen] = useState(false);
-  const [selectedDeliverySlot, setSelectedDeliverySlot] = useState("1:00 PM");
-  const [officeLocation, setOfficeLocation] = useState("Cyber City, Building 10");
+  const [selectedDeliverySlot, setSelectedDeliverySlot] = useState("12:00 – 1:00 PM");
+  const [officeLocation, setOfficeLocation] = useState("Madhapur / HITEC City");
 
   // Read from localStorage only after component mounts on client
   useEffect(() => {

@@ -1,61 +1,66 @@
 import React from "react";
 import { Metadata } from "next";
-import { WeeklyMenuCalendar } from "@/components/menu/WeeklyMenuCalendar";
+import { SingleMenuShowcase } from "@/components/menu/SingleMenuShowcase";
 import { VegMark } from "@/components/ui/VegMark";
 import { FinalCtaBand } from "@/components/home/FinalCtaBand";
-import { Sparkles, Clock, ShieldCheck } from "lucide-react";
+import { Sparkles, Clock, ShieldCheck, MapPin } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Weekly Rotating Pure Veg Menu (Mon–Fri)",
+  title: "Special North + South Indian Combo Lunch Menu (₹179)",
   description:
-    "Browse our daily rotating 100% pure vegetarian lunch menu. Homestyle paneer, dal makhani, soft phulkas, and fresh kachumber delivered to your desk in under 10 minutes.",
+    "Our complete 14-item North + South Indian combo lunch menu. Steamed rice, phulkas, fresh pappu dal, dry & wet veg curries, curd rice, pachadi, sweet & Bisleri water delivered in under 10 minutes to your Hyderabad office desk.",
 };
 
 export default function MenuPage() {
   return (
-    <div className="pt-28 md:pt-36">
+    <div className="pt-28 md:pt-36 bg-white">
       {/* Header Banner */}
-      <section className="bg-gradient-to-b from-red-50/50 via-warm-canvas to-white py-12 border-b border-red-100/50">
+      <section className="bg-gradient-to-b from-[#FAF6EE] via-[#FDFBF7] to-white py-12 border-b border-[#EFE4D6]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
           <div className="flex items-center justify-center gap-3">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-50 text-brand-red text-xs font-bold uppercase tracking-wider border border-red-100">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#FDF6F0] text-[#C85A27] text-xs font-bold uppercase tracking-wider border border-[#F5D6C4]">
               <Sparkles className="w-3.5 h-3.5" />
               Cooked Fresh Every Morning
             </span>
             <VegMark size="sm" showLabel />
           </div>
 
-          <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-neutral-900 tracking-tight">
-            Browse Our Daily Rotating, <br className="hidden sm:inline" />
-            <span className="text-brand-red">100% Vegetarian Menu.</span>
+          <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl font-black text-[#2D140D] tracking-tight">
+            North + South Indian <br className="hidden sm:inline" />
+            <span className="text-[#C85A27]">Combo Lunch Menu</span>
           </h1>
 
-          <p className="text-base sm:text-lg text-neutral-600 max-w-2xl mx-auto leading-relaxed">
-            Pure vegetarian, hygienic, and prepared fresh every morning in small batches with zero palm oil. Pre-order for today or schedule your entire week ahead.
+          <p className="text-base sm:text-lg text-[#6B5249] max-w-2xl mx-auto leading-relaxed">
+            Pure vegetarian, wholesome, and prepared fresh every morning in cold-pressed oils and pure desi ghee. Regular price <del className="font-semibold text-[#9C8278]">₹219</del> — <span className="font-bold text-[#C85A27]">Special price ₹179 per meal</span> on website or WhatsApp.
           </p>
 
-          <div className="pt-2 flex flex-wrap items-center justify-center gap-6 text-xs text-neutral-500 font-semibold">
+          <div className="pt-2 flex flex-wrap items-center justify-center gap-6 text-xs text-[#6B5249] font-semibold">
             <div className="flex items-center gap-1.5">
-              <Clock className="w-4 h-4 text-brand-red" />
-              <span>Delivered at 12:30 PM, 1:00 PM, or 1:30 PM</span>
+              <Clock className="w-4 h-4 text-[#C85A27]" />
+              <span>Slots: 12:00–1:00 PM • 1:00–2:00 PM • 2:00–3:00 PM</span>
             </div>
             <span>•</span>
             <div className="flex items-center gap-1.5">
-              <ShieldCheck className="w-4 h-4 text-green-600" />
+              <MapPin className="w-4 h-4 text-[#C85A27]" />
+              <span>All Major Hyderabad IT Hubs</span>
+            </div>
+            <span>•</span>
+            <div className="flex items-center gap-1.5">
+              <ShieldCheck className="w-4 h-4 text-emerald-600" />
               <span>Zero Palm Oil Guarantee</span>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Main Weekly Calendar Interactive Section */}
-      <section className="py-16 bg-white">
+      {/* Main Single Menu Interactive Section */}
+      <section className="py-12 sm:py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <WeeklyMenuCalendar />
+          <SingleMenuShowcase />
         </div>
       </section>
 
-      {/* Final Red Call to Action */}
+      {/* Final Call to Action */}
       <FinalCtaBand />
     </div>
   );

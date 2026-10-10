@@ -24,18 +24,19 @@ const plusJakarta = Plus_Jakarta_Sans({
 
 export const metadata: Metadata = {
   title: {
-    default: "Lunch Bag — Pure Veg Homemade Lunch at Your Desk in 10 Mins",
+    default: "Lunch Bag — Pure Veg Homemade Lunch at Your Desk in 10 Mins (Hyderabad)",
     template: "%s | Lunch Bag",
   },
   description:
-    "Pure vegetarian, hygienic, and incredibly pocket-friendly homemade lunch delivered fresh to your office desk in under 10 minutes. Zero palm oil, no artificial colors, pure goodness.",
+    "Pure vegetarian, hygienic, and incredibly pocket-friendly North + South Indian combo meal delivered fresh to your office desk in under 10 minutes across Hyderabad. Zero palm oil, no artificial colors, pure goodness.",
   keywords: [
-    "office lunch delivery",
-    "pure vegetarian lunch",
-    "homemade thali",
-    "Gurgaon Cyber City lunch delivery",
-    "healthy corporate lunch",
-    "monthly lunch pass",
+    "Hyderabad office lunch delivery",
+    "HITEC City lunch thali",
+    "Madhapur lunch box delivery",
+    "pure vegetarian lunch Hyderabad",
+    "North South Indian combo meal",
+    "healthy corporate lunch Hyderabad",
+    "monthly lunch pass Hyderabad",
     "zero palm oil food",
   ],
   authors: [{ name: "Lunch Bag Team" }],
@@ -56,14 +57,14 @@ export const metadata: Metadata = {
     url: "https://lunchbag.in",
     title: "Lunch Bag — Pure Veg Homemade Lunch at Your Desk in 10 Mins",
     description:
-      "Pure vegetarian, hygienic, and pocket-friendly homemade lunch delivered fresh to your office desk in under 10 minutes.",
+      "Pure vegetarian, hygienic, and pocket-friendly North + South Indian combo lunch delivered fresh to your office desk in under 10 minutes across Hyderabad tech hubs.",
     siteName: "Lunch Bag",
     images: [
       {
-        url: "/images/slots/hero-thali-poster.jpg",
+        url: "/images/slots/hero-combo-thali.jpg",
         width: 1200,
-        height: 675,
-        alt: "Steaming hot pure vegetarian thali from Lunch Bag",
+        height: 800,
+        alt: "Steaming hot pure vegetarian North and South Indian combo meal from Lunch Bag",
       },
     ],
   },
@@ -71,8 +72,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Lunch Bag — Pure Veg Homemade Lunch at Your Desk in 10 Mins",
     description:
-      "Skip the 45-minute wait. Hot homemade pure-veg lunch delivered to your office desk in under 10 minutes.",
-    images: ["/images/slots/hero-thali-poster.jpg"],
+      "Skip the 45-minute wait. Hot homemade pure-veg lunch delivered to your Hyderabad office desk in under 10 minutes.",
+    images: ["/images/slots/hero-combo-thali.jpg"],
   },
   robots: {
     index: true,
@@ -118,7 +119,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-full flex flex-col font-sans bg-white text-neutral-900 selection:bg-red-100 selection:text-brand-red">
+      <body className="min-h-full flex flex-col font-sans bg-white text-neutral-900 selection:bg-[#C85A27]/20 selection:text-[#C85A27]">
         <CartProvider>
           <Navbar />
           <main className="flex-1">{children}</main>

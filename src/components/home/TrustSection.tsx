@@ -12,31 +12,31 @@ export function TrustSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-50 text-brand-red text-xs font-bold uppercase tracking-wider">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#C85A27]/10 text-[#C85A27] text-xs font-bold uppercase tracking-wider">
             <ShieldCheck className="w-3.5 h-3.5" />
-            Transparent & Trustworthy
+            Transparent &amp; Trustworthy
           </div>
-          <h2 className="font-display text-3xl sm:text-4xl font-extrabold text-neutral-900 tracking-tight">
+          <h2 className="font-display text-3xl sm:text-4xl font-extrabold text-[#2D140D] tracking-tight">
             Trusted by Corporate Professionals
           </h2>
           <p className="text-neutral-600 text-sm sm:text-base leading-relaxed">
-            Honest workplace dining with zero false claims. Real feedback from office hubs across Cyber City and surrounding tech corridors.
+            Honest workplace dining with zero false claims. Real feedback from office hubs across HITEC City, Madhapur, Financial District, and surrounding Hyderabad corridors.
           </p>
         </div>
 
-        {/* Corporate Hubs / Partner Slots (Clearly marked transparent placeholders) */}
+        {/* Corporate Hubs / Partner Slots */}
         <div className="mb-16">
           <p className="text-center text-xs font-bold text-neutral-400 uppercase tracking-widest mb-6">
-            Serving Teams Across Major Tech Parks & Coworking Hubs
+            Serving Teams Across Major Tech Parks &amp; Coworking Hubs
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
             {partnerLogoSlots.map((slot) => (
               <div
                 key={slot.id}
-                className="p-4 rounded-2xl bg-neutral-50/80 border border-dashed border-neutral-300 text-center flex flex-col items-center justify-center min-h-[90px] group hover:border-brand-red/50 transition-colors"
+                className="p-4 rounded-2xl bg-[#FAF6EE]/60 border border-dashed border-neutral-300 text-center flex flex-col items-center justify-center min-h-[90px] group hover:border-[#C85A27]/50 transition-colors"
               >
-                <Building className="w-5 h-5 text-neutral-400 group-hover:text-brand-red mb-1.5 transition-colors" />
-                <span className="text-xs font-bold text-neutral-700">
+                <Building className="w-5 h-5 text-neutral-400 group-hover:text-[#C85A27] mb-1.5 transition-colors" />
+                <span className="text-xs font-bold text-[#2D140D]">
                   {slot.name}
                 </span>
                 <span className="text-[10px] text-neutral-400 mt-0.5">
@@ -47,16 +47,16 @@ export function TrustSection() {
           </div>
         </div>
 
-        {/* Verified Review Slots (Strictly client-to-provide placeholders) */}
+        {/* Verified Review Slots */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           {reviewSlots.map((review) => (
-            <TiltCard key={review.id} className="p-6 bg-white flex flex-col justify-between">
+            <TiltCard key={review.id} className="p-6 bg-white flex flex-col justify-between border border-[#C85A27]/15">
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
-                  <div className="w-9 h-9 rounded-xl bg-red-50 flex items-center justify-center text-brand-red">
+                  <div className="w-9 h-9 rounded-xl bg-[#FAF6EE] flex items-center justify-center text-[#C85A27]">
                     <MessageSquareQuote className="w-5 h-5" />
                   </div>
-                  <span className="text-[11px] font-bold px-2 py-0.5 rounded-md bg-amber-50 text-amber-700 border border-amber-200">
+                  <span className="text-[11px] font-bold px-2 py-0.5 rounded-md bg-[#FAF6EE] text-[#C85A27] border border-[#C85A27]/20">
                     Client Review Slot
                   </span>
                 </div>
@@ -67,7 +67,7 @@ export function TrustSection() {
               </div>
 
               <div className="pt-6 border-t border-neutral-100">
-                <p className="text-xs font-bold text-neutral-900">
+                <p className="text-xs font-bold text-[#2D140D]">
                   {review.clientRole}
                 </p>
                 <p className="text-[11px] text-neutral-500">
@@ -79,11 +79,11 @@ export function TrustSection() {
         </div>
 
         {/* Transparent Compliance Note */}
-        <div className="max-w-2xl mx-auto p-4 rounded-2xl bg-neutral-50 border border-neutral-200 flex items-center gap-3 text-xs text-neutral-500">
-          <Info className="w-4 h-4 text-neutral-400 shrink-0" />
+        <div className="max-w-2xl mx-auto p-4 rounded-2xl bg-[#FAF6EE]/70 border border-[#C85A27]/20 flex items-center gap-3 text-xs text-neutral-600">
+          <Info className="w-4 h-4 text-[#C85A27] shrink-0" />
           <p>
-            <span className="font-bold text-neutral-700">Client Compliance Assurance:</span>{" "}
-            {siteConfig.fssaiNumber}. Lunch Bag maintains a transparent policy: we never display fabricated reviews, false subscriber counters, or unverified star ratings.
+            <span className="font-bold text-[#2D140D]">Client Compliance Assurance:</span>{" "}
+            Lunch Bag maintains a transparent policy: we never display fabricated reviews, false subscriber counters, or unverified star ratings.
           </p>
         </div>
       </div>

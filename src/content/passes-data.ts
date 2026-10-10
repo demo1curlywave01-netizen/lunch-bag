@@ -1,10 +1,12 @@
 export interface PassPlan {
-  id: "pass-5-day" | "pass-20-day";
+  id: "pass-daily" | "pass-6-day" | "pass-24-day";
   name: string;
   badge?: string;
   tagline: string;
   pricePerMeal: string;
+  regularPricePerMeal?: string;
   totalPriceFormatted: string;
+  regularTotalPriceFormatted?: string;
   priceNote: string;
   validityDays: number;
   isPopular?: boolean;
@@ -20,66 +22,99 @@ export interface PassFaq {
 
 export const lunchPassPlans: PassPlan[] = [
   {
-    id: "pass-5-day",
-    name: "5-Day Weekly Pass",
-    tagline: "Ideal for a busy work week or testing the Lunch Bag experience",
-    pricePerMeal: "₹145 / meal",
-    totalPriceFormatted: "₹725",
-    priceNote: "[price to be confirmed by client]",
-    validityDays: 5,
+    id: "pass-daily",
+    name: "Order Daily / Single Meal",
+    badge: "Special Web/WhatsApp Offer",
+    tagline: "Order today's hot North + South Indian combo lunch without a commitment",
+    pricePerMeal: "₹179 special price",
+    regularPricePerMeal: "₹219 regular",
+    totalPriceFormatted: "₹179",
+    regularTotalPriceFormatted: "₹219",
+    priceNote: "Special price via website or WhatsApp (Save ₹40 today)",
+    validityDays: 1,
     isPopular: false,
-    savings: "Save ~₹100 vs single orders",
+    savings: "Save ₹40 off regular ₹219",
     features: [
-      "5 hot, pure-vegetarian rotating thalis (Mon–Fri)",
-      "Guaranteed under-10-minute delivery to your desk/hub",
-      "Skip or pause any day before 10:30 AM with zero penalty",
-      "Free meal rollover to the next week",
-      "Eco-friendly insulated hot pouch packaging",
+      "Full 14-item North + South Indian combo meal",
+      "Piping hot delivery in our official 5-tier Lunch Bag",
+      "Bisleri water (200ml) + sweet + spoon & napkin set included",
+      "Guaranteed under-10-minute dispatch from local Hyderabad hub",
+      "Free desk delivery with zero platform surge fees",
     ],
-    termsSnippet: "Valid across any 5 weekdays within 14 calendar days from start date.",
+    termsSnippet: "Order by 10:45 AM for lunch slot dispatch. Delivered to your office desk.",
   },
   {
-    id: "pass-20-day",
-    name: "20-Day Monthly Pass",
-    badge: "Best Value • Most Popular",
-    tagline: "Automate your entire month's office lunch with zero daily ordering hassle",
-    pricePerMeal: "₹130 / meal",
-    totalPriceFormatted: "₹2,599",
-    priceNote: "[price to be confirmed by client]",
-    validityDays: 20,
-    isPopular: true,
-    savings: "Save ~₹600 + free sweet upgrades",
+    id: "pass-6-day",
+    name: "6 Days Lunch Pass",
+    badge: "Great Weekly Trial",
+    tagline: "Automate your full 6-day work week with authentic homestyle meals",
+    pricePerMeal: "₹166.50 / meal",
+    regularPricePerMeal: "₹219 regular",
+    totalPriceFormatted: "₹999",
+    regularTotalPriceFormatted: "₹1,314",
+    priceNote: "₹999 total for 6 meals (Save ₹315 vs regular price)",
+    validityDays: 6,
+    isPopular: false,
+    savings: "Save ₹315 vs regular ₹219",
     features: [
-      "20 hot, pure-veg home-style thalis across the month",
-      "Priority 10-minute dispatch slot at your chosen time",
-      "Pause anytime for leaves/WFH days via WhatsApp or portal",
-      "Zero delivery fee or platform surge charges forever",
-      "Complimentary chef-special dessert on every Friday",
-      "Dedicated WhatsApp concierge for meal scheduling",
+      "6 hot North + South Indian rotating combo meals",
+      "Guaranteed under-10-minute desk delivery to your Hyderabad office",
+      "Skip or pause any meal before 10:30 AM with automatic credit rollover",
+      "Direct app access: manage meal days & wallet anytime",
+      "Signature 5-tier thermal spill-proof packaging included",
     ],
-    termsSnippet: "Valid across any 20 weekdays within 45 calendar days. Complete flexibility.",
+    termsSnippet: "Valid across any 6 workdays within 18 calendar days. Complete flexibility.",
+  },
+  {
+    id: "pass-24-day",
+    name: "24 Days Monthly Pass",
+    badge: "Best Value • Most Popular",
+    tagline: "Automate your entire month's office lunch with maximum savings & VIP flexibility",
+    pricePerMeal: "₹162 / meal",
+    regularPricePerMeal: "₹219 regular",
+    totalPriceFormatted: "₹3888",
+    regularTotalPriceFormatted: "₹5,256",
+    priceNote: "₹3,888 total for 24 meals (Save ₹1,368 vs regular price)",
+    validityDays: 24,
+    isPopular: true,
+    savings: "Save ₹1,368 vs regular ₹219",
+    features: [
+      "24 wholesome North + South Indian combo meals across the month",
+      "Priority 10-minute desk dispatch at your chosen slot",
+      "Skip any meal before 10:30 AM with 100% wallet credit refund",
+      "Control meal schedule & wallet balance directly on web app",
+      "Zero delivery fee or platform surge charges forever",
+      "Complimentary special dessert upgrade on every Friday",
+      "Dedicated WhatsApp concierge for meal scheduling & preferences",
+    ],
+    termsSnippet: "Valid across any 24 weekdays within 50 calendar days. Unused meals never expire early.",
   },
 ];
 
 export const passFaqs: PassFaq[] = [
   {
-    question: "How does the under 10-minute delivery work?",
+    question: "How does the under 10-minute desk delivery work in Hyderabad?",
     answer:
-      "We prepare our fresh meals in our central kitchen and dispatch hot, insulated temperature-controlled batches to pre-staged hubs right outside major office towers (like Cyber City, Udyog Vihar, and Golf Course Road). When your scheduled lunch hour arrives, your assigned runner brings it straight up to your desk or reception in under 10 minutes.",
+      "We prepare our fresh North + South combo meals in our central hygienic kitchen and dispatch hot, temperature-controlled batches to pre-staged staging hubs right outside major Hyderabad corporate clusters (like HITEC City, Madhapur, HITEX, Genome Valley, Begumpet, and Jeedimetla). When your chosen lunch slot arrives, our floor runner brings it directly up to your desk or reception in under 10 minutes.",
   },
   {
-    question: "What if I take leave or have WFH on a scheduled day?",
+    question: "What if I take leave, have WFH, or want to skip a meal?",
     answer:
-      "Simply pause or skip that day via WhatsApp before 10:30 AM! Your pass balance never expires prematurely; unused meals roll over automatically to your future workdays.",
+      "Simply skip or pause your meal via your Web Account or WhatsApp before 10:30 AM! Your pass balance never expires prematurely; skipped meals roll over automatically to your future workdays or stay in your wallet.",
   },
   {
-    question: "Is the kitchen 100% vegetarian?",
+    question: "Can I manage my meal days and wallet balance online?",
     answer:
-      "Yes, absolutely. Lunch Bag operates an exclusively pure-vegetarian, separate kitchen. We never touch non-vegetarian ingredients, egg items, or cheap industrial palm oils. Everything is cooked strictly in heart-healthy oils and pure desi ghee.",
+      "Yes! Every Lunch Pass holder gets full app/web access to 'My Pass / Account' where you can control your meal calendar, toggle which days you want food, skip upcoming meals, view transaction history, and recharge your wallet balance anytime.",
   },
   {
-    question: "Can I choose my daily lunch time slot?",
+    question: "What are the available delivery time slots?",
     answer:
-      "Yes. During pass checkout, select your preferred delivery window: 12:30 PM, 1:00 PM, or 1:30 PM. You can also modify your slot for upcoming days with quick notice.",
+      "We deliver in three convenient time slots: 12:00 – 1:00 PM, 1:00 – 2:00 PM, and 2:00 – 3:00 PM. You can choose your preferred slot when ordering and change it whenever needed.",
+  },
+  {
+    question: "What is included in each combo meal?",
+    answer:
+      "Each meal is a complete 14-item North + South Indian feast: Steamed Rice, Chapati/Phulka/Lachha Paratha, flavorful Dal (Palak Kura Pappu, Gongura Pappu, etc.), Dry Veg Curry, Wet Veg Curry, Amul Curd / Raita / Curd Rice, Chutney / Pachadi, Fryums, Sweet (Gulab Jamun / Rasgulla), Pickle sachet, Salt sachet, Bisleri water bottle (200 ml), Spoon/fork & napkin set, and Mouth freshener sachet.",
   },
 ];

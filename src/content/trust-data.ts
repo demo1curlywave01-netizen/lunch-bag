@@ -13,35 +13,35 @@ export interface ReviewSlot {
 }
 
 export const partnerLogoSlots: PartnerSlot[] = [
-  { id: "partner-1", name: "[Client Corporate Partner Logo 1]", note: "To be supplied by client: e.g. Tech park or corporate client" },
-  { id: "partner-2", name: "[Client Corporate Partner Logo 2]", note: "To be supplied by client: e.g. Consulting firm or agency" },
-  { id: "partner-3", name: "[Client Corporate Partner Logo 3]", note: "To be supplied by client: e.g. Coworking space partner" },
-  { id: "partner-4", name: "[Client Corporate Partner Logo 4]", note: "To be supplied by client: e.g. Startup hub" },
+  { id: "partner-1", name: "[Hyderabad Tech Park Partner 1]", note: "To be supplied by client: e.g. HITEC City Tech Park or IT campus" },
+  { id: "partner-2", name: "[Genome Valley Biotech Firm 2]", note: "To be supplied by client: e.g. Pharma or Biotech campus" },
+  { id: "partner-3", name: "[Hyderabad Coworking Space 3]", note: "To be supplied by client: e.g. WeWork / Awfis / Innov8 Madhapur" },
+  { id: "partner-4", name: "[Industrial Area Client 4]", note: "To be supplied by client: e.g. Nacharam or Jeedimetla office" },
 ];
 
 export const reviewSlots: ReviewSlot[] = [
   {
     id: "rev-1",
-    clientRole: "Senior Product Designer [Client to provide real name]",
-    officeArea: "Cyber City, DLF Phase 2",
+    clientRole: "Senior Software Engineer [Client to provide real name]",
+    officeArea: "Madhapur / HITEC City",
     reviewQuote:
-      "“[Client to provide verified review quote: The 10-minute delivery is genuinely a lifesaver during tight release weeks. The paneer and dal taste exactly like home, not commercial hotel food.]”",
+      "“[Client to provide verified review quote: The North + South Indian combo is pure genius. Having hot phulkas with authentic Gongura Pappu and paneer subzi delivered straight to my desk in 10 minutes saves my workday.]”",
     isPlaceholder: true,
   },
   {
     id: "rev-2",
-    clientRole: "HR Director, 80-member Tech Team [Client to provide real name]",
-    officeArea: "Golf Course Road Hub",
+    clientRole: "HR Director, 120-member Tech Team [Client to provide real name]",
+    officeArea: "Genome Valley Biotech Park",
     reviewQuote:
-      "“[Client to provide verified review quote: We started Lunch Bag passes as a workplace perk for our engineers. Afternoon energy is noticeably better with zero palm oil food.]”",
+      "“[Client to provide verified review quote: We started Lunch Bag monthly passes for our team. The zero palm oil cooking and hygienic separate vegetarian setup keeps afternoon energy high and post-lunch drowsiness away.]”",
     isPlaceholder: true,
   },
   {
     id: "rev-3",
-    clientRole: "Finance Associate [Client to provide real name]",
-    officeArea: "Udyog Vihar Phase 3",
+    clientRole: "Operations Lead [Client to provide real name]",
+    officeArea: "HITEX Exhibition Centre / Kondapur",
     reviewQuote:
-      "“[Client to provide verified review quote: Pocket-friendly, piping hot, and 100% pure veg. The skip-day flexibility on the 20-day pass makes it unbeatable.]”",
+      "“[Client to provide verified review quote: The ₹179 special price for a full 14-item thali with Bisleri water is unbeatable in Hyderabad. Skip-meal flexibility in the web account is super convenient.]”",
     isPlaceholder: true,
   },
 ];

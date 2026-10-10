@@ -2,24 +2,50 @@
 
 @layer base {
   :root {
+    /* Brand Palette extracted from Lunch Bag Logo */
+    --brand-primary: #C85A27; /* Rich roasted terracotta orange from logo */
+    --brand-primary-hover: #B34B1B;
+    --brand-primary-dark: #983B10;
+    --brand-primary-light: #DE6B32;
+    --brand-primary-tint: #FDF6F0;
+    --brand-primary-border: #F5D6C4;
+    --brand-primary-glow: rgba(200, 90, 39, 0.22);
+
+    /* Deep Warm Roasted Espresso (NOT harsh black) from logo bag & text */
+    --brand-espresso: #2D140D;
+    --brand-espresso-surface: #3D1D14;
+    --brand-espresso-border: #52281D;
+
+    /* Warm Cream / Ivory Backgrounds */
     --bg-primary: #FFFFFF;
-    --bg-secondary: #FFF8F6;
-    --bg-blush: #FFE5E0;
-    --bg-blush-subtle: #FFF1EE;
-    
-    --brand-red: #D62828;
-    --brand-red-dark: #9D0208;
-    --brand-red-light: #C8102E;
-    --brand-red-glow: rgba(214, 40, 40, 0.15);
+    --bg-canvas: #FAF6EE;
+    --bg-canvas-subtle: #FDFBF7;
+    --bg-canvas-card: #F5EDE2;
+    --bg-blush: #FBEFE7;
+    --bg-blush-subtle: #FDF6F0;
 
-    --text-primary: #1F1A17;
-    --text-muted: #665D56;
-    --text-subtle: #998C84;
+    /* Text Tones in Warm Espresso Spectrum */
+    --text-primary: #2D140D;
+    --text-muted: #6B5249;
+    --text-subtle: #967C72;
 
-    --border-subtle: #F3EBE6;
-    --border-hover: #F8D2CB;
+    /* Neutral & Card Borders */
+    --border-subtle: #EFE4D6;
+    --border-hover: #E3D0BE;
 
-    --veg-green: #16A34A;
+    /* Golden Wheat Sprig Accent from logo */
+    --brand-wheat: #D48D48;
+    --brand-wheat-light: #FAF0E4;
+
+    /* 100% Pure Veg Emerald */
+    --veg-green: #15803D;
+    --veg-green-bg: #DCFCE7;
+
+    /* Compatibility aliases for previous red token references */
+    --brand-red: #C85A27;
+    --brand-red-dark: #983B10;
+    --brand-red-light: #DE6B32;
+    --brand-red-glow: rgba(200, 90, 39, 0.22);
   }
 
   * {
@@ -42,29 +68,45 @@
   }
 }
 
-/* Custom Utilities for Lunch Bag Design System */
+/* Custom Utilities for Lunch Bag Design System matching Logo */
 .bg-warm-canvas {
-  background-color: #FFF8F6;
+  background-color: #FAF6EE;
 }
 
 .bg-blush-card {
-  background-color: #FFE5E0;
+  background-color: #FBEFE7;
 }
 
+.bg-brand-espresso {
+  background-color: #2D140D;
+}
+
+.text-brand-espresso {
+  color: #2D140D;
+}
+
+.border-brand-espresso {
+  border-color: #3D1D14;
+}
+
+.text-brand-primary,
 .text-brand-red {
-  color: #D62828;
+  color: #C85A27;
 }
 
+.bg-brand-primary,
 .bg-brand-red {
-  background-color: #D62828;
+  background-color: #C85A27;
 }
 
+.bg-brand-primary-dark,
 .bg-brand-red-dark {
-  background-color: #9D0208;
+  background-color: #983B10;
 }
 
+.border-brand-primary,
 .border-brand-red {
-  border-color: #D62828;
+  border-color: #C85A27;
 }
 
 .font-display {
@@ -125,7 +167,7 @@
   background: linear-gradient(
     60deg,
     transparent 20%,
-    rgba(255, 255, 255, 0.25) 50%,
+    rgba(255, 255, 255, 0.28) 50%,
     transparent 80%
   );
   transform: translateX(-100%);
@@ -136,23 +178,24 @@
   transform: translateX(100%);
 }
 
-/* Subtle Indian thali pattern background for texture */
+/* Subtle Indian thali pattern background for texture with terracotta dots */
 .thali-subtle-pattern {
-  background-image: radial-gradient(#d62828 0.75px, transparent 0.75px);
-  background-size: 24px 24px;
+  background-image: radial-gradient(#C85A27 0.8px, transparent 0.8px);
+  background-size: 26px 26px;
   background-color: #ffffff;
 }
 
-/* Pulse Glow */
-@keyframes pulseRedGlow {
+/* Pulse Glow with Warm Terracotta */
+@keyframes pulsePrimaryGlow {
   0%, 100% {
-    box-shadow: 0 0 0 0 rgba(214, 40, 40, 0.4);
+    box-shadow: 0 0 0 0 rgba(200, 90, 39, 0.45);
   }
   50% {
-    box-shadow: 0 0 0 8px rgba(214, 40, 40, 0);
+    box-shadow: 0 0 0 8px rgba(200, 90, 39, 0);
   }
 }
 
-.animate-red-pulse {
-  animation: pulseRedGlow 2.4s infinite;
+.animate-red-pulse,
+.animate-primary-pulse {
+  animation: pulsePrimaryGlow 2.4s infinite;
 }

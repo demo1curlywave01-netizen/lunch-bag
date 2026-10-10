@@ -8,11 +8,14 @@ export interface SiteConfig {
   tagline: string;
   subtext: string;
   speedTickerText: string;
+  regularPrice: number;
+  specialPrice: number;
   fssaiNumber: string;
   contactEmail: string;
   contactPhone: string;
   address: string;
   deliveryHubs: string[];
+  deliverySlots: string[];
   whatsAppNumber: string;
   whatsAppDefaultMessage: string;
   navItems: NavItem[];
@@ -20,23 +23,35 @@ export interface SiteConfig {
 
 export const siteConfig: SiteConfig = {
   name: "Lunch Bag",
-  tagline: "Your Favorite Meals. At Your Desk in 10 Minutes.",
+  tagline: "North + South Indian Homestyle Lunch. At Your Desk in 10 Minutes.",
   subtext:
-    "Pure vegetarian, hygienic, and incredibly pocket-friendly homemade lunch delivered fresh to your office. No artificial colors, no palm oil, just pure goodness.",
-  speedTickerText: "Eat Fresh in 10 Mins: Grab your warm, healthy lunch from our nearest delivery rider.",
-  // Client placeholders as per strict prompt rules (never invent fake numbers/licenses)
-  fssaiNumber: "FSSAI Lic. No.: [to be added by client]",
-  contactEmail: "hello@lunchbag.in [to be verified]",
-  contactPhone: "+91 98XXX XXXXX [to be provided]",
-  address: "Central Cloud Kitchen & Staging Hubs, Cyber City [Exact address to be added]",
+    "Pure vegetarian, authentic North + South Indian combo meals delivered fresh and piping hot to your office across Hyderabad. No artificial colors, no palm oil, just pure homestyle goodness.",
+  speedTickerText: "Hyderabad Office Express: Special ₹179 Lunch Offer (Reg. ₹219) • Despatched fresh from nearest staging hub in under 10 mins!",
+  regularPrice: 219,
+  specialPrice: 179,
+  fssaiNumber: "",
+  contactEmail: "hello@lunchbag.in",
+  contactPhone: "+91 9985590101",
+  address: "Central Cloud Kitchen & Staging Hubs, HITEC City & Madhapur, Hyderabad",
   deliveryHubs: [
-    "Cyber City Hub A (Building 8 & 10)",
-    "Golf Course Road Hub (One Horizon area)",
-    "Udyog Vihar Hub (Phase 2 & 3)",
-    "Sector 44 Tech Park Hub",
+    "HITEX Exhibition Centre",
+    "Genome Valley, Biotech Park",
+    "Nacharam Industrial Area / Habsiguda / HMT Nagar",
+    "Jeedimetla Industrial Area",
+    "Suchitra / Alwal / Quthbullapur / Kompally",
+    "ASRao Nagar / Sainikpuri",
+    "Madhapur / HITEC City",
+    "Kukatpally / Balanagar",
+    "Paradise / Begumpet / Ameerpet",
+    "Rest of Hyderabad / Secunderabad",
   ],
-  whatsAppNumber: "919999999999", // Placeholder WhatsApp
-  whatsAppDefaultMessage: "Hi Lunch Bag team, I'd like to ask about daily homemade lunch delivery to my office desk!",
+  deliverySlots: [
+    "12:00 – 1:00 PM",
+    "1:00 – 2:00 PM",
+    "2:00 – 3:00 PM",
+  ],
+  whatsAppNumber: "919985590101",
+  whatsAppDefaultMessage: "Hi Lunch Bag team, I'd like to order the ₹179 Special North + South Indian Combo Lunch Meal to my office desk in Hyderabad!",
   navItems: [
     { label: "Home", href: "/" },
     { label: "Menu", href: "/menu" },
